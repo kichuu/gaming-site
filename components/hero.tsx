@@ -52,7 +52,7 @@ export function Hero() {
             
             <p className="text-xl text-gray-300 max-w-xl">
               Discover cutting-edge gaming components that deliver unmatched performance. 
-              From high-end GPUs to premium RAM, we've got everything you need.
+              From high-end GPUs to premium RAM, we&apos;ve got everything you need.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

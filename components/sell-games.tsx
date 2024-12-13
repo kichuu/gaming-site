@@ -17,7 +17,7 @@ export default function SellGames() {
       {/* Content */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl font-extrabold mb-6 text-green-400 tracking-tight">Sell Your Pre-owned Games</h2>
-        <p className="mb-10 text-xl text-gray-300 max-w-2xl mx-auto">Turn your old games into cash or store credit. It's quick, easy, and eco-friendly!</p>
+        <p className="mb-10 text-xl text-gray-300 max-w-2xl mx-auto">Turn your old games into cash or store credit. It&apos;s quick, easy, and eco-friendly!</p>
         <div className="flex justify-center">
         <Button
   asChild

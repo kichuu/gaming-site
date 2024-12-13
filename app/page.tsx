@@ -1,4 +1,4 @@
-import { Hero } from '@/components/Hero'
+import { Hero } from '@/components/hero'
 import FeaturedCategories from '@/components/featured-categories'
 import PopularProducts from '@/components/popular-products'
 import SellGames from '@/components/sell-games'
