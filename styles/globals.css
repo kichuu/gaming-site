@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 18 18 18;
+  --foreground: 255 255 255;
+  --card: 24 24 24;
+  --card-foreground: 255 255 255;
+  --popover: 18 18 18;
+  --popover-foreground: 255 255 255;
+  --primary: 0 128 0;
+  --primary-foreground: 255 255 255;
+  --secondary: 0 100 0;
+  --secondary-foreground: 255 255 255;
+  --muted: 24 24 24;
+  --muted-foreground: 166 173 186;
+  --accent: 0 128 0;
+  --accent-foreground: 255 255 255;
+  --destructive: 239 68 68;
+  --destructive-foreground: 255 255 255;
+  --border: 24 24 24;
+  --input: 24 24 24;
+  --ring: 0 128 0;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+.text-stroke-green {
+  -webkit-text-stroke: 2px #00a000;
+  text-stroke: 2px #00a000;
+}
+
