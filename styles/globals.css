@@ -33,3 +33,21 @@ body {
   text-stroke: 2px #00a000;
 }
 
+.glow-shadow {
+  background: radial-gradient(circle at right, rgba(0, 128, 0, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(30px);
+  opacity: 0.7;
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.5;
+    transform: translateX(5%) scale(0.95);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateX(0%) scale(1.05);
+  }
+}
+

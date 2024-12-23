@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@react-three/drei": "^9.88.2",
-    "@radix-ui/react-slot": "^1.1.1",
     "@react-three/fiber": "^8.15.12",
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.45",
