@@ -2,18 +2,18 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ShoppingCart, User, Menu, X, Gamepad, Search} from 'lucide-react';
+import { ShoppingCart, User, Menu, X, Gamepad, Search, MonitorPlay, Cpu, HardDrive } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
-  // const categories = [
-  //   { name: 'Graphics Cards', icon: MonitorPlay },
-  //   { name: 'Processors', icon: Cpu },
-  //   { name: 'Storage', icon: HardDrive },
-  //   { name: 'Peripherals', icon: Gamepad }
-  // ];
+  const categories = [
+    { name: 'Graphics Cards', icon: MonitorPlay },
+    { name: 'Processors', icon: Cpu },
+    { name: 'Storage', icon: HardDrive },
+    { name: 'Peripherals', icon: Gamepad }
+  ];
 
   return (
     <nav className="bg-[#121212] border-b border-green-900/30 relative z-50">
