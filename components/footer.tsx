@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="space-y-4">
           <h3 className="text-2xl font-bold text-[#00a000] mb-4">TechGear</h3>
-          <p className="text-sm">Your one-stop shop for all things gaming. We&apos;re passionate about delivering the best gaming experience to our customers.</p>
+          <p className="text-sm">Your one-stop shop for all things gaming. We're passionate about delivering the best gaming experience to our customers.</p>
           <div className="flex space-x-4">
             <Link href="#" className="hover:text-[#00a000] transition-colors"><Facebook size={20} /></Link>
             <Link href="#" className="hover:text-[#00a000] transition-colors"><Twitter size={20} /></Link>
