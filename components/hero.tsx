@@ -1,9 +1,8 @@
-'use client'
+// 'use client'
 import React from 'react';
 import { MonitorPlay, Cpu, HardDrive, Gamepad, ChevronRight } from 'lucide-react';
 import { ProductCard } from './ProductCard';
 import { Stats } from './Stats';
-import { FloatingParticles } from './FloatingParticles';
 
 export function Hero() {
   const products = [
@@ -74,7 +73,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-          <div className="shadow"></div>
 
     </section>
   );
