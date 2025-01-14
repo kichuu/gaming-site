@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'GameNation - Your Gaming Destination',
-  description: 'Explore the world of gaming with GameNation. Shop for consoles, games, and accessories.',
+  title: 'GameTech - Your Gaming Destination',
+  description: 'Explore the world of gaming with GameTech. Shop for consoles, games, and accessories.',
 }
 
 export default function RootLayout({
