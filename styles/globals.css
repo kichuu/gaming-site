@@ -8,23 +8,23 @@
 :root {
   /* Base colors */
   --background: 0 0% 7%; /* Dark background (RGB: 18 18 18) */
-  --foreground: 0 0% 100%; /* White foreground text (RGB: 255 255 255) */
+  --foreground: 0 0% 100%; /* secondary-foreground foreground text (RGB: 255 255 255) */
 
   /* Card colors */
   --card: 0 0% 14%; /* Dark gray card background (RGB: 36 36 36) */
-  --card-foreground: 0 0% 100%; /* White card text (RGB: 255 255 255) */
+  --card-foreground: 0 0% 100%; /* secondary-foreground card text (RGB: 255 255 255) */
 
   /* Popover colors */
   --popover: 0 0% 7%; /* Dark popover background (RGB: 18 18 18) */
-  --popover-foreground: 0 0% 100%; /* White popover text (RGB: 255 255 255) */
+  --popover-foreground: 0 0% 100%; /* secondary-foreground popover text (RGB: 255 255 255) */
 
   /* Primary colors */
   --primary: 134 61% 50%; /* Bright green primary (RGB: 34 179 87) */
-  --primary-foreground: 0 0% 100%; /* White text for primary (RGB: 255 255 255) */
+  --primary-foreground: 0 0% 100%; /* secondary-foreground text for primary (RGB: 255 255 255) */
 
   /* Secondary colors */
   --secondary: 134 61% 30%; /* Darker green secondary (RGB: 26 143 69) */
-  --secondary-foreground: 0 0% 100%; /* White text for secondary (RGB: 255 255 255) */
+  --secondary-foreground: 0 0% 100%; /* secondary-foreground text for secondary (RGB: 255 255 255) */
 
   /* Muted colors */
   --muted: 0 0% 14%; /* Dark muted background (RGB: 36 36 36) */
@@ -32,11 +32,11 @@
 
   /* Accent colors */
   --accent: 134 61% 50%; /* Bright green accent (RGB: 34 179 87) */
-  --accent-foreground: 0 0% 100%; /* White text for accent (RGB: 255 255 255) */
+  --accent-foreground: 0 0% 100%; /* secondary-foreground text for accent (RGB: 255 255 255) */
 
   /* Destructive colors */
   --destructive: 0 77% 53%; /* Bright red for destructive actions (RGB: 239 68 68) */
-  --destructive-foreground: 0 0% 100%; /* White text for destructive actions (RGB: 255 255 255) */
+  --destructive-foreground: 0 0% 100%; /* secondary-foreground text for destructive actions (RGB: 255 255 255) */
 
   /* Border and input colors */
   --border: 0 0% 14%; /* Dark gray border (RGB: 36 36 36) */
