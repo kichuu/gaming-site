@@ -77,8 +77,8 @@ export default function BuildPC() {
   )
 
   return (
-    <div className="bg-[#121212] min-h-screen text-white px-6 py-12">
-      <h1 className="text-5xl font-bold text-center mb-10 text-[#22B357]">Build Your Dream PC</h1>
+    <div className="bg-[#121212] min-h-screen text-secondary-foreground px-6 py-12">
+      <h1 className="text-5xl font-bold text-center mb-10 text-primary">Build Your Dream PC</h1>
       
       {/* Progress Indicator */}
       <div className="flex justify-between mb-12">
@@ -86,10 +86,10 @@ export default function BuildPC() {
           <div key={step.name} className="flex flex-col items-center">
             <div
               className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
-                index <= currentStep ? 'bg-[#22B357]' : 'bg-gray-500'
+                index <= currentStep ? 'bg-primary' : 'bg-gray-500'
               }`}
             >
-              <step.icon className="w-8 h-8 text-white" />
+              <step.icon className="w-8 h-8 text-secondary-foreground" />
             </div>
             <span className="mt-2 text-sm text-gray-400">{step.name}</span>
           </div>
@@ -105,19 +105,19 @@ export default function BuildPC() {
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.4 }}
         >
-          <h2 className="text-3xl font-semibold mb-6 text-white">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground">
             Select your {steps[currentStep].name}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {components[steps[currentStep].name].map((component) => (
               <Card
                 key={component.name}
-                className="bg-[#1a1a1a] border-2 border-transparent hover:border-[#22B357] hover:shadow-2xl transition-all cursor-pointer rounded-lg"
+                className="bg-[#1a1a1a] border-2 border-transparent hover:border-primary hover:shadow-2xl transition-all cursor-pointer rounded-lg"
                 onClick={() => handleSelectComponent(component)}
               >
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3">{component.name}</h3>
-                  <p className="text-[#22B357] font-bold text-lg">${component.price.toFixed(2)}</p>
+                  <h3 className="text-xl font-semibold text-secondary-foreground mb-3">{component.name}</h3>
+                  <p className="text-primary font-bold text-lg">${component.price.toFixed(2)}</p>
                 </CardContent>
               </Card>
             ))}
@@ -127,17 +127,17 @@ export default function BuildPC() {
 
       {/* Summary */}
       <div className="mt-10 bg-[#1a1a1a] p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-semibold mb-6 text-white">Your Build</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground">Your Build</h2>
         {Object.entries(selectedComponents).map(([key, value]: [string, any]) => (
           <div key={key} className="flex justify-between items-center mb-4">
             <span className="text-gray-300">{key}</span>
-            <span className="text-white">{value.name} - ${value.price.toFixed(2)}</span>
+            <span className="text-secondary-foreground">{value.name} - ${value.price.toFixed(2)}</span>
           </div>
         ))}
         <div className="mt-6 pt-6 border-t border-gray-700">
           <div className="flex justify-between items-center">
-            <span className="text-2xl font-semibold text-white">Total</span>
-            <span className="text-2xl font-bold text-[#22B357]">${totalPrice.toFixed(2)}</span>
+            <span className="text-2xl font-semibold text-secondary-foreground">Total</span>
+            <span className="text-2xl font-bold text-primary">${totalPrice.toFixed(2)}</span>
           </div>
         </div>
       </div>
@@ -147,14 +147,14 @@ export default function BuildPC() {
         <Button
           onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
           disabled={currentStep === 0}
-          className="bg-[#22B357] hover:bg-[#1a8f45] text-white py-3 px-8 rounded-lg transition-all"
+          className="bg-primary hover:bg-[#1a8f45] text-secondary-foreground py-3 px-8 rounded-lg transition-all"
         >
           Previous
         </Button>
         <Button
           onClick={() => setCurrentStep(Math.min(steps.length - 1, currentStep + 1))}
           disabled={currentStep === steps.length - 1}
-          className="bg-[#22B357] hover:bg-[#1a8f45] text-white py-3 px-8 rounded-lg transition-all"
+          className="bg-primary hover:bg-[#1a8f45] text-secondary-foreground py-3 px-8 rounded-lg transition-all"
         >
           Next
         </Button>
