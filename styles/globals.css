@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+
 :root {
-  --background: 18 18 18; /* Dark background */
-  --foreground: 255 255 255; /* Light text color */
-  --card: 24 24 24; /* Dark card background */
-  --card-foreground: 255 255 255; /* Light card text */
-  --popover: 18 18 18; /* Dark popover background */
-  --popover-foreground: 255 255 255; /* Light popover text */
-  --primary: 34 179 87; /* Green primary color (from #22B357) */
-  --primary-foreground: 255 255 255; /* White text on primary color */
-  --secondary: 34 197 94; /* Slightly lighter green for secondary */
-  --secondary-foreground: 255 255 255; /* White text on secondary color */
-  --muted: 24 24 24; /* Muted dark background */
-  --muted-foreground: 166 173 186; /* Muted text color */
-  --accent: 34 179 87; /* Accent color (same green as primary) */
-  --accent-foreground: 255 255 255; /* White text on accent */
-  --destructive: 239 68 68; /* Red for destructive actions */
-  --destructive-foreground: 255 255 255; /* White text on destructive color */
-  --border: 24 24 24; /* Border color */
-  --input: 24 24 24; /* Input background color */
-  --ring: 34 179 87; /* Green ring for focus */
+  --background: 18 18 18;
+  --foreground: 255 255 255;
+  --card: 36 36 36;
+  --card-foreground: 255 255 255;
+  --popover: 18 18 18;
+  --popover-foreground: 255 255 255;
+  --primary: 34 179 87;
+  --primary-foreground: 255 255 255;
+  --secondary: 26 143 69;
+  --secondary-foreground: 255 255 255;
+  --muted: 36 36 36;
+  --muted-foreground: 166 173 186;
+  --accent: 34 179 87;
+  --accent-foreground: 255 255 255;
+  --destructive: 239 68 68;
+  --destructive-foreground: 255 255 255;
+  --border: 36 36 36;
+  --input: 36 36 36;
+  --ring: 34 179 87;
 }
 
 body {
