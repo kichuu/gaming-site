@@ -135,7 +135,7 @@ export default function ProductPage() {
         <div
   className={`lg:w-1/4 bg-[#1a1a1a] p-4 rounded-lg shadow-lg sticky top-4 h-fit`}
 >
-  <h1 className="text-2xl font-semibold text-secondary-foreground mb-4">Filters</h1>
+  <h1 className="text-3xl font-semibold text-center text-secondary-foreground mb-4">Filters</h1>
 
   <FilterSection title="">
     <Input
