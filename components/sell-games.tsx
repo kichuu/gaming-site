@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Button } from './ui/button'
+import Link from "next/link"
+import { Button } from "./ui/button"
 
 export default function SellGames() {
   return (
@@ -16,41 +16,46 @@ export default function SellGames() {
 
       {/* Content */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <h2 className="text-4xl font-extrabold mb-6 text-green-400 tracking-tight">Sell Your Pre-owned Games</h2>
-        <p className="mb-10 text-xl text-gray-300 max-w-2xl mx-auto">Turn your old games into cash or store credit. It&apos;s quick, easy, and eco-friendly!</p>
+        <h2 className="text-4xl font-extrabold mb-6 text-green-400 tracking-tight">
+          Sell Your Pre-owned Games
+        </h2>
+        <p className="mb-10 text-xl text-gray-300 max-w-2xl mx-auto">
+          Turn your old games into cash or store credit. It&apos;s quick, easy,
+          and eco-friendly!
+        </p>
         <div className="flex justify-center">
-        <Button
-  asChild
-  size="lg"
-  className="relative text-secondary-foreground font-bold w-[200px] h-[60px] rounded-full transition-all duration-300 ease-in-out transform focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50 text-xl hover:bg-transparent bg-transparent"
->
-  <Link href="/sell" className="relative flex items-center justify-center space-x-2">
-    <span className="tracking-wider uppercase relative animate-pulse">
-      <span className="relative z-10">Start Selling Now</span>
-    </span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M17 8l4 4m0 0l-4 4m4-4H3"
-      />
-    </svg>
-  </Link>
-</Button>
-
-
-
-
+          <Button
+            asChild
+            size="lg"
+            className="relative text-secondary-foreground font-bold w-[200px] h-[60px] rounded-full transition-all duration-300 ease-in-out transform focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50 text-xl hover:bg-transparent bg-transparent"
+          >
+            <Link
+              href="/sell"
+              className="relative flex items-center justify-center space-x-2"
+            >
+              <span className="tracking-wider uppercase relative animate-pulse">
+                <span className="relative whitespace-nowrap z-10">
+                  Start Selling Now
+                </span>
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
   )
 }
-

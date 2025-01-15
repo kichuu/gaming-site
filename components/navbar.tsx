@@ -24,7 +24,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
               <Gamepad className="h-8 w-8 text-green-500" />
-              <span className="text-xl font-bold bg-gradient-to-r from-secondary-foreground to-green-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-primary bg-clip-text text-transparent">
                 TechGear
               </span>
             </Link>
@@ -51,9 +51,9 @@ export default function Navbar() {
             {/* Navigation Links */}
             <nav className="flex items-center space-x-6">
               <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors">Home</Link>
-              <Link href="#" className="text-gray-300 hover:text-green-400 transition-colors">Products</Link>
+              <Link href="/products" className="text-gray-300 hover:text-green-400 transition-colors">Products</Link>
               <Link href="#" className="text-gray-300 hover:text-green-400 transition-colors">Build PC</Link>
-              <Link href="#" className="text-gray-300 hover:text-green-400 transition-colors">Support</Link>
+              <Link href="/support" className="text-gray-300 hover:text-green-400 transition-colors">Support</Link>
             </nav>
 
             {/* Action Buttons */}
@@ -103,9 +103,9 @@ export default function Navbar() {
           {/* Mobile Navigation Links */}
           <div className="space-y-4">
             <Link href="/" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Home</Link>
-            <Link href="#" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Products</Link>
+            <Link href="/products" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Products</Link>
             <Link href="#" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Build PC</Link>
-            <Link href="#" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Support</Link>
+            <Link href="/support" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Support</Link>
           </div>
 
           {/* Mobile Action Buttons */}

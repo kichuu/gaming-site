@@ -35,7 +35,7 @@ export default function FAQ() {
   return (
     <section className="py-16 px-4 bg-[#121212]">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-secondary-foreground to-green-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-12 text-center bg-primary bg-clip-text text-transparent">
           Frequently Asked Questions
         </h2>
         <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
