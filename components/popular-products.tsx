@@ -136,7 +136,7 @@ export default function PopularProducts() {
                   </Badge>
                 </div>
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold mb-2 text-white">
+                  <h3 className="text-lg font-semibold mb-2 text-secondary-foreground">
                     {product.name}
                   </h3>
                   <p className="text-[#22C55E] font-bold text-xl">
