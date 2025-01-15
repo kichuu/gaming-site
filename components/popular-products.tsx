@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { ShoppingCart, ChevronLeft, ChevronRight } from "lucide-react"
+import { Card, CardContent, CardFooter } from "./ui/card"
+import { Badge } from "./ui/badge"
+import { Button } from "./ui/button"
 
 type Product = {
   id: number
@@ -136,7 +136,7 @@ export default function PopularProducts() {
                   </Badge>
                 </div>
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold mb-2 text-white">
+                  <h3 className="text-lg font-semibold mb-2 text-secondary-foreground">
                     {product.name}
                   </h3>
                   <p className="text-[#22C55E] font-bold text-xl">

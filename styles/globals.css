@@ -2,26 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
 :root {
-  --background: 18 18 18;
-  --foreground: 255 255 255;
-  --card: 24 24 24;
-  --card-foreground: 255 255 255;
-  --popover: 18 18 18;
-  --popover-foreground: 255 255 255;
-  --primary: 0 128 0;
-  --primary-foreground: 255 255 255;
-  --secondary: 0 100 0;
-  --secondary-foreground: 255 255 255;
-  --muted: 24 24 24;
-  --muted-foreground: 166 173 186;
-  --accent: 0 128 0;
-  --accent-foreground: 255 255 255;
-  --destructive: 239 68 68;
-  --destructive-foreground: 255 255 255;
-  --border: 24 24 24;
-  --input: 24 24 24;
-  --ring: 0 128 0;
+  /* Base colors */
+  --background: 0 0% 7%; /* Dark background (RGB: 18 18 18) */
+  --foreground: 0 0% 100%; /* secondary-foreground foreground text (RGB: 255 255 255) */
+
+  /* Card colors */
+  --card: 0 0% 14%; /* Dark gray card background (RGB: 36 36 36) */
+  --card-foreground: 0 0% 100%; /* secondary-foreground card text (RGB: 255 255 255) */
+
+  /* Popover colors */
+  --popover: 0 0% 7%; /* Dark popover background (RGB: 18 18 18) */
+  --popover-foreground: 0 0% 100%; /* secondary-foreground popover text (RGB: 255 255 255) */
+
+  /* Primary colors */
+  --primary: 134 61% 50%; /* Bright green primary (RGB: 34 179 87) */
+  --primary-foreground: 0 0% 100%; /* secondary-foreground text for primary (RGB: 255 255 255) */
+
+  /* Secondary colors */
+  --secondary: 134 61% 30%; /* Darker green secondary (RGB: 26 143 69) */
+  --secondary-foreground: 0 0% 100%; /* secondary-foreground text for secondary (RGB: 255 255 255) */
+
+  /* Muted colors */
+  --muted: 0 0% 14%; /* Dark muted background (RGB: 36 36 36) */
+  --muted-foreground: 210 15% 66%; /* Light gray muted text (RGB: 166 173 186) */
+
+  /* Accent colors */
+  --accent: 134 61% 50%; /* Bright green accent (RGB: 34 179 87) */
+  --accent-foreground: 0 0% 100%; /* secondary-foreground text for accent (RGB: 255 255 255) */
+
+  /* Destructive colors */
+  --destructive: 0 77% 53%; /* Bright red for destructive actions (RGB: 239 68 68) */
+  --destructive-foreground: 0 0% 100%; /* secondary-foreground text for destructive actions (RGB: 255 255 255) */
+
+  /* Border and input colors */
+  --border: 0 0% 14%; /* Dark gray border (RGB: 36 36 36) */
+  --input: 0 0% 14%; /* Dark gray input background (RGB: 36 36 36) */
+
+  /* Ring color */
+  --ring: 134 61% 50%; /* Bright green ring for focus states (RGB: 34 179 87) */
 }
 
 body {
@@ -29,12 +51,12 @@ body {
 }
 
 .text-stroke-green {
-  -webkit-text-stroke: 2px #00a000;
-  text-stroke: 2px #00a000;
+  -webkit-text-stroke: 2px #22B357; /* Green text stroke */
+  text-stroke: 2px #22B357; /* Green text stroke */
 }
 
 .glow-shadow {
-  background: radial-gradient(circle at right, rgba(0, 128, 0, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle at right, rgba(34, 179, 87, 0.3) 0%, rgba(0, 0, 0, 0) 70%); /* Green glow */
   filter: blur(30px);
   opacity: 0.7;
   animation: glow 4s ease-in-out infinite alternate;
@@ -50,4 +72,3 @@ body {
     transform: translateX(0%) scale(1.05);
   }
 }
-

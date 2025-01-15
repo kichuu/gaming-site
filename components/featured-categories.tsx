@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { Gamepad, Joystick, Headphones } from 'lucide-react'
+import { Card, CardContent, CardFooter } from './ui/card'
+import { Button } from './ui/button'
 
 const categories = [
   { name: 'Consoles', icon: Gamepad, description: 'Latest gaming consoles and bundles' },

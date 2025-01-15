@@ -61,7 +61,7 @@ const config: Config = {
       },
       keyframes: {
         breathe: {
-          '0%, 100%': { color: 'white' },
+          '0%, 100%': { color: 'secondary-foreground' },
           '50%': { color: '#34d399' }, // Tailwind green-400
         },
       },

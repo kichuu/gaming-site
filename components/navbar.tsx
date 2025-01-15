@@ -24,7 +24,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
               <Gamepad className="h-8 w-8 text-green-500" />
-              <span className="text-xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-primary bg-clip-text text-transparent">
                 TechGear
               </span>
             </Link>
@@ -32,16 +32,16 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {/* Search Bar */}
-            <div className="relative">
-              <div className={`flex items-center bg-white/5 rounded-lg px-4 py-2 transition-all ${
+            {/* Adjusted Search Bar */}
+            <div className="relative -ml-4"> {/* Added negative margin */}
+              <div className={`flex items-center bg-secondary-foreground/5 rounded-lg px-4 py-2 transition-all ${
                 isSearchFocused ? 'ring-2 ring-green-500' : ''
               }`}>
                 <Search className="h-5 w-5 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search components..."
-                  className="bg-transparent border-none outline-none text-white pl-3 w-64"
+                  className="bg-transparent border-none outline-none text-secondary-foreground pl-3 w-64"
                   onFocus={() => setIsSearchFocused(true)}
                   onBlur={() => setIsSearchFocused(false)}
                 />
@@ -50,26 +50,21 @@ export default function Navbar() {
 
             {/* Navigation Links */}
             <nav className="flex items-center space-x-6">
-              {['Home', 'Products', 'Build PC', 'Support'].map((item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="text-gray-300 hover:text-green-400 transition-colors"
-                >
-                  {item}
-                </Link>
-              ))}
+              <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors">Home</Link>
+              <Link href="/products" className="text-gray-300 hover:text-green-400 transition-colors">Products</Link>
+              <Link href="#" className="text-gray-300 hover:text-green-400 transition-colors">Build PC</Link>
+              <Link href="/support" className="text-gray-300 hover:text-green-400 transition-colors">Support</Link>
             </nav>
 
             {/* Action Buttons */}
             <div className="flex items-center space-x-4">
               <button className="relative p-2 text-gray-300 hover:text-green-400 transition-colors">
                 <ShoppingCart className="h-6 w-6" />
-                <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-green-500 text-secondary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   3
                 </span>
               </button>
-              <button className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
+              <button className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-secondary-foreground px-4 py-2 rounded-lg transition-colors">
                 <User className="h-5 w-5" />
                 <span>Account</span>
               </button>
@@ -95,36 +90,31 @@ export default function Navbar() {
         <div className="container mx-auto px-4 py-4">
           {/* Mobile Search */}
           <div className="mb-4">
-            <div className="flex items-center bg-white/5 rounded-lg px-4 py-2">
+            <div className="flex items-center bg-secondary-foreground/5 rounded-lg px-4 py-2">
               <Search className="h-5 w-5 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search components..."
-                className="bg-transparent border-none outline-none text-white pl-3 w-full"
+                className="bg-transparent border-none outline-none text-secondary-foreground pl-3 w-full"
               />
             </div>
           </div>
 
           {/* Mobile Navigation Links */}
           <div className="space-y-4">
-            {['Home', 'Products', 'Build PC', 'Support'].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="block text-gray-300 hover:text-green-400 py-2 transition-colors"
-              >
-                {item}
-              </Link>
-            ))}
+            <Link href="/" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Home</Link>
+            <Link href="/products" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Products</Link>
+            <Link href="#" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Build PC</Link>
+            <Link href="/support" className="block text-gray-300 hover:text-green-400 py-2 transition-colors">Support</Link>
           </div>
 
           {/* Mobile Action Buttons */}
           <div className="mt-6 space-y-4">
-            <button className="w-full flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
+            <button className="w-full flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 text-secondary-foreground px-4 py-2 rounded-lg transition-colors">
               <User className="h-5 w-5" />
               <span>Account</span>
             </button>
-            <button className="w-full flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-colors">
+            <button className="w-full flex items-center justify-center space-x-2 bg-secondary-foreground/10 hover:bg-secondary-foreground/20 text-secondary-foreground px-4 py-2 rounded-lg transition-colors">
               <ShoppingCart className="h-5 w-5" />
               <span>Cart (3)</span>
             </button>
@@ -134,4 +124,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

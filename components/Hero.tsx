@@ -35,13 +35,13 @@ export function Hero() {
       <div className="container mx-auto px-4 min-h-[calc(100vh-4rem)] relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center min-h-[calc(100vh-4rem)] py-16 gap-12">
           {/* Left Content */}
-          <div className="flex-1 text-white space-y-8">
-            <div className="inline-flex items-center px-4 py-2 bg-[#22B357]/30 rounded-full text-[#22B357] mb-4 backdrop-blur-sm">
+          <div className="flex-1 text-secondary-foreground space-y-8">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/30 rounded-full text-primary mb-4 backdrop-blur-sm">
               <MonitorPlay className="w-4 h-4 mr-2" />
               <span>Premium Gaming Components</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-[#22B357]">
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-primary">
               Level Up Your Gaming Setup
             </h1>
             
@@ -51,11 +51,11 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-[#22C55E] hover:bg-[#1a9f4d] rounded-lg font-semibold text-white transition-all flex items-center justify-center group backdrop-blur-sm">
+              <button className="px-8 py-4 bg-[#22C55E] hover:bg-[#1a9f4d] rounded-lg font-semibold text-secondary-foreground transition-all flex items-center justify-center group backdrop-blur-sm">
                 Shop Components
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-lg font-semibold text-white transition-all backdrop-blur-sm">
+              <button className="px-8 py-4 bg-secondary-foreground/10 hover:bg-secondary-foreground/20 rounded-lg font-semibold text-secondary-foreground transition-all backdrop-blur-sm">
                 Build Your PC
               </button>
             </div>
