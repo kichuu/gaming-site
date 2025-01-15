@@ -131,72 +131,101 @@ export default function ProductPage() {
 
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Filters */}
-        <div className={`lg:w-1/4 space-y-6 bg-[#1a1a1a] p-6 rounded-lg`}>
-          <h2 className="text-xl font-semibold text-white">Filters</h2>
+        {/* Filters */}
+        <div
+  className={`lg:w-1/4 bg-[#1a1a1a] p-4 rounded-lg shadow-lg sticky top-4 h-fit`}
+>
+  <h1 className="text-2xl font-semibold text-white mb-4">Filters</h1>
 
-          <FilterSection title="Search">
-            <Input
-              type="text"
-              placeholder="Search products..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#2a2a2a] text-white border-[#22B357] focus:ring-2 focus:ring-[#22B357] transition-all duration-300"
-            />
-          </FilterSection>
+  <FilterSection title="">
+    <Input
+      type="text"
+      placeholder="Search products..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className="w-full bg-[#2a2a2a] text-white border-[#22B357] focus:ring-2 focus:ring-[#22B357] rounded-md transition-all duration-300"
+    />
+  </FilterSection>
 
-          <FilterSection title="Price Range">
-            <Slider
-              min={0}
-              max={1500}
-              step={10}
-              value={priceRange}
-              onValueChange={setPriceRange}
-              className="w-full"
-            />
-            <div className="flex justify-between mt-2 text-white">
-              <span>${priceRange[0]}</span>
-              <span>${priceRange[1]}</span>
-            </div>
-          </FilterSection>
+  <FilterSection title="Price Range">
+    <div className="space-y-2">
+      <Slider
+        min={0}
+        max={1500}
+        step={10}
+        value={priceRange}
+        onValueChange={setPriceRange}
+        className="w-full"
+      />
+      <div className="flex justify-between text-sm text-white">
+        <span>${priceRange[0]}</span>
+        <span>${priceRange[1]}</span>
+      </div>
+    </div>
+  </FilterSection>
 
-          <FilterSection title="Categories">
-            {categories.map((category) => (
-              <div key={category} className="flex items-center">
-                <Checkbox
-                  id={`category-${category}`}
-                  checked={selectedCategories.includes(category)}
-                  onCheckedChange={() => handleCategoryChange(category)}
-                  className="border-[#22B357] focus:ring-2 focus:ring-[#22B357]"
-                />
-                <Label
-                  htmlFor={`category-${category}`}
-                  className="ml-2 text-white"
-                >
-                  {category}
-                </Label>
-              </div>
-            ))}
-          </FilterSection>
-
-          <FilterSection title="Brands">
-            {brands.map((brand) => (
-              <div key={brand} className="flex items-center">
-                <Checkbox
-                  id={`brand-${brand}`}
-                  checked={selectedBrands.includes(brand)}
-                  onCheckedChange={() => handleBrandChange(brand)}
-                  className="border-[#22B357] focus:ring-2 focus:ring-[#22B357]"
-                />
-                <Label
-                  htmlFor={`brand-${brand}`}
-                  className="ml-2 text-white"
-                >
-                  {brand}
-                </Label>
-              </div>
-            ))}
-          </FilterSection>
+  <FilterSection title="Categories">
+    <div className="space-y-1">
+      {categories.map((category) => (
+        <div
+          key={category}
+          className="flex items-center hover:bg-[#2a2a2a] rounded-md p-2 transition-all duration-300"
+        >
+          <Checkbox
+            id={`category-${category}`}
+            checked={selectedCategories.includes(category)}
+            onCheckedChange={() => handleCategoryChange(category)}
+            className="border-[#22B357] focus:ring-2 focus:ring-[#22B357]"
+          />
+          <Label
+            htmlFor={`category-${category}`}
+            className="ml-2 text-sm text-white"
+          >
+            {category}
+          </Label>
         </div>
+      ))}
+    </div>
+  </FilterSection>
+
+  <FilterSection title="Brands">
+    <div className="space-y-1">
+      {brands.map((brand) => (
+        <div
+          key={brand}
+          className="flex items-center hover:bg-[#2a2a2a] rounded-md p-2 transition-all duration-300"
+        >
+          <Checkbox
+            id={`brand-${brand}`}
+            checked={selectedBrands.includes(brand)}
+            onCheckedChange={() => handleBrandChange(brand)}
+            className="border-[#22B357] focus:ring-2 focus:ring-[#22B357]"
+          />
+          <Label
+            htmlFor={`brand-${brand}`}
+            className="ml-2 text-sm text-white"
+          >
+            {brand}
+          </Label>
+        </div>
+      ))}
+    </div>
+  </FilterSection>
+
+  <Button
+    onClick={() => {
+      setPriceRange([0, 1500])
+      setSelectedCategories(['All'])
+      setSelectedBrands(['All'])
+      setSearchTerm('')
+    }}
+    className="w-full bg-[#22B357] text-black mt-4 hover:bg-[#1a1a1a] hover:text-[#22B357] border border-[#22B357] transition-all duration-300"
+  >
+    Reset Filters
+  </Button>
+</div>
+
+
 
         {/* Product Grid */}
         <div className="lg:w-3/4">

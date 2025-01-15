@@ -6,9 +6,9 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Login - Your Site Name",
-  description: "Log in to access your account on Your Site Name.",
-  keywords: ["login", "authentication", "Next.js"],
+  title: "Products - GameTech",
+  description: "See all the available products on GameTech.",
+  keywords: ["products", "authentication", "Next.js"],
 }
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
