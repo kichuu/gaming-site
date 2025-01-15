@@ -127,7 +127,7 @@ export default function ProductPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-8 text-[#22B357]">Gaming Products</h1>
+      <h1 className="text-4xl font-bold text-center mb-8 text-primary">Gaming Products</h1>
 
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Filters */}
@@ -135,7 +135,7 @@ export default function ProductPage() {
         <div
   className={`lg:w-1/4 bg-[#1a1a1a] p-4 rounded-lg shadow-lg sticky top-4 h-fit`}
 >
-  <h1 className="text-2xl font-semibold text-white mb-4">Filters</h1>
+  <h1 className="text-2xl font-semibold text-secondary-foreground mb-4">Filters</h1>
 
   <FilterSection title="">
     <Input
@@ -143,7 +143,7 @@ export default function ProductPage() {
       placeholder="Search products..."
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
-      className="w-full bg-[#2a2a2a] text-white border-[#22B357] focus:ring-2 focus:ring-[#22B357] rounded-md transition-all duration-300"
+      className="w-full bg-[#2a2a2a] text-secondary-foreground border-primary focus:ring-2 focus:ring-primary rounded-md transition-all duration-300"
     />
   </FilterSection>
 
@@ -157,7 +157,7 @@ export default function ProductPage() {
         onValueChange={setPriceRange}
         className="w-full"
       />
-      <div className="flex justify-between text-sm text-white">
+      <div className="flex justify-between text-sm text-secondary-foreground">
         <span>${priceRange[0]}</span>
         <span>${priceRange[1]}</span>
       </div>
@@ -175,11 +175,11 @@ export default function ProductPage() {
             id={`category-${category}`}
             checked={selectedCategories.includes(category)}
             onCheckedChange={() => handleCategoryChange(category)}
-            className="border-[#22B357] focus:ring-2 focus:ring-[#22B357]"
+            className="border-primary focus:ring-2 focus:ring-primary"
           />
           <Label
             htmlFor={`category-${category}`}
-            className="ml-2 text-sm text-white"
+            className="ml-2 text-sm text-secondary-foreground"
           >
             {category}
           </Label>
@@ -199,11 +199,11 @@ export default function ProductPage() {
             id={`brand-${brand}`}
             checked={selectedBrands.includes(brand)}
             onCheckedChange={() => handleBrandChange(brand)}
-            className="border-[#22B357] focus:ring-2 focus:ring-[#22B357]"
+            className="border-primary focus:ring-2 focus:ring-primary"
           />
           <Label
             htmlFor={`brand-${brand}`}
-            className="ml-2 text-sm text-white"
+            className="ml-2 text-sm text-secondary-foreground"
           >
             {brand}
           </Label>
@@ -219,7 +219,7 @@ export default function ProductPage() {
       setSelectedBrands(['All'])
       setSearchTerm('')
     }}
-    className="w-full bg-[#22B357] text-black mt-4 hover:bg-[#1a1a1a] hover:text-[#22B357] border border-[#22B357] transition-all duration-300"
+    className="w-full bg-primary text-black mt-4 hover:bg-[#1a1a1a] hover:text-primary border border-primary transition-all duration-300"
   >
     Reset Filters
   </Button>
@@ -231,12 +231,12 @@ export default function ProductPage() {
         <div className="lg:w-3/4">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">
-              <Label htmlFor="sort" className="text-white">Sort by:</Label>
+              <Label htmlFor="sort" className="text-secondary-foreground">Sort by:</Label>
               <select
                 id="sort"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-[#2a2a2a] text-white border-[#22B357] rounded-md p-2 focus:ring-2 focus:ring-[#22B357] transition-all duration-300"
+                className="bg-[#2a2a2a] text-secondary-foreground border-primary rounded-md p-2 focus:ring-2 focus:ring-primary transition-all duration-300"
               >
                 <option value="featured">Featured</option>
                 <option value="priceLowToHigh">Price: Low to High</option>

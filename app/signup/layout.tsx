@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head />
-      <body className="flex flex-col min-h-screen bg-[#121212] text-white">
+      <body className="flex flex-col min-h-screen bg-[#121212] text-secondary-foreground">
         <Navbar />
 
         <main>{children}</main>
