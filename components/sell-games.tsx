@@ -22,7 +22,7 @@ export default function SellGames() {
         <Button
   asChild
   size="lg"
-  className="relative text-white font-bold w-[200px] h-[60px] rounded-full transition-all duration-300 ease-in-out transform focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50 text-xl hover:bg-transparent bg-transparent"
+  className="relative text-secondary-foreground font-bold w-[200px] h-[60px] rounded-full transition-all duration-300 ease-in-out transform focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50 text-xl hover:bg-transparent bg-transparent"
 >
   <Link href="/sell" className="relative flex items-center justify-center space-x-2">
     <span className="tracking-wider uppercase relative animate-pulse">
